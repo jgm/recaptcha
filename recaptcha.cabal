@@ -10,6 +10,7 @@ Maintainer:      John MacFarlane <jgm@berkeley.edu>
 Stability:       alpha
 Category:        Network
 Tested-With:     GHC
+Homepage:        http://github.com/jgm/recaptcha/tree/master
 Synopsis:        Functions for using the reCAPTCHA service in web applications.
 Description:     reCAPTCHA (http://recaptcha.net/) is a service that provides
                  captchas for preventing automated spam in web applications.
