@@ -51,7 +51,7 @@ captchaFields recaptchaPublicKey mbErrorMsg =
               , textarea ! [name "recaptcha_challenge_field", rows "3", cols "40"] << noHtml
               , input ! [thetype "hidden", name "recaptcha_response_field", value "manual_challenge"]
               ]
-  where captchaURL s = "http://api.recaptcha.net/" ++ s ++ "?k=" ++ recaptchaPublicKey ++
+  where captchaURL s = "https://www.google.com/recaptcha/api/" ++ s ++ "?k=" ++ recaptchaPublicKey ++
           case mbErrorMsg of
                Just e  -> "?error=" ++ e
                Nothing -> ""
@@ -63,7 +63,7 @@ validateCaptcha :: String                 -- ^ reCAPTCHA private key
                 -> String                 -- ^ value of the recaptcha_response_field
                 -> IO (Either String ())  -- ^ @Left@ error message, or @Right ()@ for success
 validateCaptcha recaptchaPrivateKey ipaddress challenge response = do
-  let verifyURIString = "http://api-verify.recaptcha.net/verify"
+  let verifyURIString = "http://www.google.com/recaptcha/api/verify"
   let verifyURI = case parseURI verifyURIString of
                        Just uri  -> uri
                        Nothing   -> error $ "Could not parse URI: " ++ verifyURIString
