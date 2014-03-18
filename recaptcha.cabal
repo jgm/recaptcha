@@ -1,6 +1,6 @@
 Name:            recaptcha
 Version:         0.1.0.1
-Cabal-Version:   >= 1.2
+Cabal-Version:   >= 1.6
 Build-Type:      Custom
 License:         BSD3
 License-File:    LICENSE
@@ -15,11 +15,14 @@ Synopsis:        Functions for using the reCAPTCHA service in web applications.
 Description:     reCAPTCHA (http://recaptcha.net/) is a service that provides
                  captchas for preventing automated spam in web applications.
                  recaptcha-hs provides functions for using reCAPTCHA in Haskell
-                 web applications. 
+                 web applications.
+Source-repository head
+  type:          git
+  location:      git://github.com/jgm/recaptcha.git
 Library
-  Build-Depends: base, HTTP >= 3001.1.4, xhtml >= 3000.0, network >= 2.2.0.1
+  Build-Depends: base < 5, HTTP >= 3001.1.4, xhtml >= 3000.0, network >= 2.2.0.1
   Hs-Source-Dirs:  .
   Exposed-Modules: Network.Captcha.ReCaptcha
-  Ghc-Options:     -Wall -threaded
+  Ghc-Options:     -Wall
   Ghc-Prof-Options: -auto-all
 
