@@ -63,7 +63,7 @@ validateCaptcha :: String                 -- ^ reCAPTCHA private key
                 -> String                 -- ^ value of the recaptcha_response_field
                 -> IO (Either String ())  -- ^ @Left@ error message, or @Right ()@ for success
 validateCaptcha recaptchaPrivateKey ipaddress challenge response = do
-  let verifyURIString = "http://www.google.com/recaptcha/api/verify"
+  let verifyURIString = "https://www.google.com/recaptcha/api/verify"
   let verifyURI = case parseURI verifyURIString of
                        Just uri  -> uri
                        Nothing   -> error $ "Could not parse URI: " ++ verifyURIString
