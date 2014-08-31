@@ -1,5 +1,5 @@
 Name:            recaptcha
-Version:         0.1.0.2
+Version:         0.1.0.3
 Cabal-Version:   >= 1.6
 Build-Type:      Custom
 License:         BSD3
@@ -19,8 +19,17 @@ Description:     reCAPTCHA (http://recaptcha.net/) is a service that provides
 Source-repository head
   type:          git
   location:      git://github.com/jgm/recaptcha.git
+
+Flag network-uri
+  Description:   Get Network.URI from the network-uri package
+    Default:     True
+
 Library
-  Build-Depends: base < 5, HTTP >= 3001.1.4, xhtml >= 3000.0, network >= 2.2.0.1
+  Build-Depends: base < 5, HTTP >= 3001.1.4, xhtml >= 3000.0
+  if flag(network-uri)
+     Build-Depends: network-uri >= 2.6 && < 2.7, network >= 2.6
+  else
+     Build-Depends: network >= 2 && < 2.6
   Hs-Source-Dirs:  .
   Exposed-Modules: Network.Captcha.ReCaptcha
   Ghc-Options:     -Wall
