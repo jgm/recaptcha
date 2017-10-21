@@ -12,8 +12,9 @@ Category:        Network
 Tested-With:     GHC
 Homepage:        http://github.com/jgm/recaptcha/tree/master
 Synopsis:        Functions for using the reCAPTCHA service in web applications.
-Description:     reCAPTCHA (http://recaptcha.net/) is a service that provides
-                 captchas for preventing automated spam in web applications.
+Description:     reCAPTCHA (https://www.google.com/recaptcha/intro/) is a
+                 service that provides captchas for preventing automated
+                 spam in web applications.
                  recaptcha-hs provides functions for using reCAPTCHA in Haskell
                  web applications.
 Source-repository head
