@@ -1,7 +1,7 @@
 Name:            recaptcha
 Version:         0.1.0.3
-Cabal-Version:   >= 1.6
-Build-Type:      Custom
+Cabal-Version:   >= 1.8
+Build-Type:      Simple
 License:         BSD3
 License-File:    LICENSE
 Copyright:       (c) 2008 John MacFarlane
@@ -34,5 +34,4 @@ Library
   Hs-Source-Dirs:  .
   Exposed-Modules: Network.Captcha.ReCaptcha
   Ghc-Options:     -Wall
-  Ghc-Prof-Options: -auto-all
 
